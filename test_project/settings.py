@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import local_settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(=3+680z!0u5709+-%h9_!g95rql5&w+-s+*++a)g(0$pd*m0('
+SECRET_KEY = local_settings.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
